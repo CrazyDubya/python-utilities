@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#2563eb" stroke="#1e40af" stroke-width="2"/>
+  
+  <!-- Port/network symbol -->
+  <g transform="translate(64, 64)">
+    <!-- Central hub -->
+    <circle cx="0" cy="0" r="8" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+    
+    <!-- Network connections radiating out -->
+    <g stroke="#60a5fa" stroke-width="3" stroke-linecap="round">
+      <!-- Top -->
+      <line x1="0" y1="-8" x2="0" y2="-28"/>
+      <circle cx="0" cy="-32" r="4" fill="#60a5fa"/>
+      
+      <!-- Top-right -->
+      <line x1="6" y1="-6" x2="20" y2="-20"/>
+      <circle cx="23" cy="-23" r="4" fill="#60a5fa"/>
+      
+      <!-- Right -->
+      <line x1="8" y1="0" x2="28" y2="0"/>
+      <circle cx="32" cy="0" r="4" fill="#60a5fa"/>
+      
+      <!-- Bottom-right -->
+      <line x1="6" y1="6" x2="20" y2="20"/>
+      <circle cx="23" cy="23" r="4" fill="#60a5fa"/>
+      
+      <!-- Bottom -->
+      <line x1="0" y1="8" x2="0" y2="28"/>
+      <circle cx="0" cy="32" r="4" fill="#60a5fa"/>
+      
+      <!-- Bottom-left -->
+      <line x1="-6" y1="6" x2="-20" y2="20"/>
+      <circle cx="-23" cy="23" r="4" fill="#60a5fa"/>
+      
+      <!-- Left -->
+      <line x1="-8" y1="0" x2="-28" y2="0"/>
+      <circle cx="-32" cy="0" r="4" fill="#60a5fa"/>
+      
+      <!-- Top-left -->
+      <line x1="-6" y1="-6" x2="-20" y2="-20"/>
+      <circle cx="-23" cy="-23" r="4" fill="#60a5fa"/>
+    </g>
+    
+    <!-- Scanner sweep effect -->
+    <g stroke="#10b981" stroke-width="2" fill="none">
+      <circle cx="0" cy="0" r="15" opacity="0.6"/>
+      <circle cx="0" cy="0" r="22" opacity="0.4"/>
+      <circle cx="0" cy="0" r="30" opacity="0.2"/>
+    </g>
+    
+    <!-- Port numbers -->
+    <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">
+      P
+    </text>
+  </g>
+  
+  <!-- Corner accents -->
+  <g fill="#34d399" opacity="0.8">
+    <rect x="8" y="8" width="12" height="3" rx="1"/>
+    <rect x="108" y="8" width="12" height="3" rx="1"/>
+    <rect x="8" y="117" width="12" height="3" rx="1"/>
+    <rect x="108" y="117" width="12" height="3" rx="1"/>
+  </g>
+</svg>

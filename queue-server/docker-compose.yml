@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  queue-server:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - USE_REDIS=true
+      - REDIS_URL=redis://redis:6379/0
+      - REQUIRE_API_KEY=true
+      # Note: For production deployments, consider using Docker secrets or external
+      # secret management (e.g., HashiCorp Vault, AWS Secrets Manager) instead of
+      # plain text environment variables for sensitive values like API_KEYS and SECRET_KEY
+      - API_KEYS=${API_KEYS}
+      - SECRET_KEY=${SECRET_KEY}
+    depends_on:
+      - redis
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  redis_data:

@@ -1565,3 +1565,20 @@ Absorbed from [`CrazyDubya/python-utilities-collection`](https://github.com/Craz
 | `claude-play/gemma_enhanced.py` | `ollama_tools/gemma-client/gemma_enhanced.py` | Full interactive TUI client with memory/personality system (~65KB) |
 | `claude-play/README.md` | `ollama_tools/gemma-client/README.md` | Original project docs, verbatim |
 | `claude-play/.gitignore` | `ollama_tools/gemma-client/.gitignore` | Original ignore rules, verbatim |
+
+## 📜 Provenance — Wave 5 consolidation (2026-09-14)
+
+The following projects were merged in as subdirectories via archive-and-merge
+(sources archived with full history intact). The full tree of each source is
+byte-identical to its original HEAD at merge time.
+
+| Source | Subdirectory | Original HEAD |
+|---|---|---|
+| [pytocplusplus](https://github.com/CrazyDubya/pytocplusplus) | `pytocplusplus/` | `d54672986a5a3615a85f3fedadee42cafede9756` |
+| [portsy](https://github.com/CrazyDubya/portsy) | `portsy/` | `b4e07fa738914765da1c1b383d270fe3c590f46e` |
+| [Queue-Server](https://github.com/CrazyDubya/Queue-Server) | `queue-server/` | `cdf393c3cb24be746cb92cf50d778f3c43ab50eb` |
+
+- **`pytocplusplus/`** — Python→C++ conversion tool with type inference, pybind11
+  bindings, tests, and a commercial-viability analysis.
+- **`portsy/`** — single-file port scanner plus a dev-server route analyzer (with installers).
+- **`queue-server/`** — small queue server experiment.

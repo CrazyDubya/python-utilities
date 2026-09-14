@@ -1,0 +1,20 @@
+# Core dependencies
+Flask==3.0.0
+requests==2.31.0
+
+# Optional: Redis for enhanced persistence
+redis==5.0.1
+
+# Testing
+pytest==7.4.3
+pytest-flask==1.3.0
+pytest-cov==4.1.0
+
+# Production server
+gunicorn==21.2.0
+
+# Monitoring and logging
+python-dotenv==1.0.0
+
+# Security
+werkzeug==3.0.1

@@ -1552,3 +1552,16 @@ Absorbed from [`CrazyDubya/python-utilities-collection`](https://github.com/Craz
 | `python-utilities-collection/conversation_analyzer.py` | *(not merged)* | Superseded by base's class-based `data_processing/conversation_analyzer.py` |
 
 > ⚠️ **Caveat — `data_processing/stock_analysis_wrapper.py`**: calls the C++ executable at the hardcoded path `/mnt/data/finance_calculations_fixed`. Update this path (or parameterize it) before running.
+## 📦 Provenance — claude-play → gemma-client merge (2026-09-13)
+
+**Source:** [`CrazyDubya/claude-play`](https://github.com/CrazyDubya/claude-play) — archived after merge. Source HEAD at merge: `d6ec654b7eded0984d8503c09d6b87a11c4bbf73`.
+
+> **Rename note:** the source repo's name was misleading — it contains zero Claude code. It is a Gemma (Google LLM) interactive TUI client with a memory/personality system that talks to Ollama at `localhost:11434/api/generate`. The misleading `claude-` prefix was dropped on merge; the code now lives under `ollama_tools/gemma-client/`.
+
+| Source file | New location | Notes |
+|---|---|---|
+| `claude-play/gemma_client.py` | `ollama_tools/gemma-client/gemma_client.py` | Simple streaming query client for Ollama (`longa-gemma` model) |
+| `claude-play/gemma_simple.py` | `ollama_tools/gemma-client/gemma_simple.py` | Simplified interactive client |
+| `claude-play/gemma_enhanced.py` | `ollama_tools/gemma-client/gemma_enhanced.py` | Full interactive TUI client with memory/personality system (~65KB) |
+| `claude-play/README.md` | `ollama_tools/gemma-client/README.md` | Original project docs, verbatim |
+| `claude-play/.gitignore` | `ollama_tools/gemma-client/.gitignore` | Original ignore rules, verbatim |

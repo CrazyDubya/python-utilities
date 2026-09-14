@@ -1537,3 +1537,18 @@ This collection represents cleaned and documented versions of utility scripts de
 **Happy coding! 🚀** 
 
 *Explore the directories for detailed documentation and examples. Each script is designed to be both educational and immediately useful for real-world applications.*
+---
+
+## 📦 Provenance
+
+Absorbed from [`CrazyDubya/python-utilities-collection`](https://github.com/CrazyDubya/python-utilities-collection) at commit `5a5fd467e9c6e33b28437f7785471082a8337d64` (2026-09-13 consolidation):
+
+| Source file | New location | Notes |
+|---|---|---|
+| `python-utilities-collection/code_scanner.py` | `utilities/code_scanner.py` | Directory & code analysis tool |
+| `python-utilities-collection/as_string.py` | `utilities/as_string.py` | String utility helpers |
+| `python-utilities-collection/llm-toolbox-updated-conversation-manager.py` | `ollama_tools/conversation_manager.py` | Async Ollama conversation manager |
+| `python-utilities-collection/stock_analysis_wrapper.py` | `data_processing/stock_analysis_wrapper.py` | ⚠️ Hardcoded C++ executable path `/mnt/data/finance_calculations_fixed` (line 15) — update before running |
+| `python-utilities-collection/conversation_analyzer.py` | *(not merged)* | Superseded by base's class-based `data_processing/conversation_analyzer.py` |
+
+> ⚠️ **Caveat — `data_processing/stock_analysis_wrapper.py`**: calls the C++ executable at the hardcoded path `/mnt/data/finance_calculations_fixed`. Update this path (or parameterize it) before running.

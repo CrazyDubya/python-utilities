@@ -51,17 +51,18 @@ class DirectoryScanner:
                 
                 for table in tables:
                     table_name = table[0]
+                    quoted_table = '"' + table_name.replace('"', '""') + '"'
                     output.append(f"\nTable: {table_name}")
                     
                     # Get table schema
-                    cursor.execute(f"PRAGMA table_info({table_name});")
+                    cursor.execute(f"PRAGMA table_info({quoted_table});")
                     columns = cursor.fetchall()
                     
                     for col in columns:
                         output.append(f"  {col[1]} {col[2]}")
                         
                     # Get row count
-                    cursor.execute(f"SELECT COUNT(*) FROM {table_name};")
+                    cursor.execute(f"SELECT COUNT(*) FROM {quoted_table};")
                     count = cursor.fetchone()[0]
                     output.append(f"  Rows: {count}")
                     

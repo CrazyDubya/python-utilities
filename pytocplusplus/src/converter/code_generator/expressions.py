@@ -19,8 +19,8 @@ class ExpressionTranslator:
             if isinstance(node.value, bool):
                 return 'true' if node.value else 'false'
             elif isinstance(node.value, str):
-                # Escape quotes in strings
-                escaped_str = node.value.replace('"', '\\"')
+                # Escape backslashes before quotes and decoded LF characters.
+                escaped_str = node.value.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n')
                 return f'"{escaped_str}"'
             elif node.value is None:
                 return 'nullptr'

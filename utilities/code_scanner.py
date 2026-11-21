@@ -41,10 +41,10 @@ def scan_directory(start_path: str = ".") -> str:
                             notebook = json.load(nb_file)
                             for cell in notebook.get('cells', []):
                                 if cell['cell_type'] == 'markdown':
-                                    output.append("\n".join(cell.get('source', [])))
+                                    output.append("".join(cell.get('source', [])))
                                 elif cell['cell_type'] == 'code':
                                     output.append("CODE:")
-                                    output.append("\n".join(cell.get('source', [])))
+                                    output.append("".join(cell.get('source', [])))
                     except Exception as e:
                         output.append(f"Error reading notebook: {e}")
 

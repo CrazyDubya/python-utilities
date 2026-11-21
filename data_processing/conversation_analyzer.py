@@ -81,7 +81,7 @@ class ConversationAnalyzer:
         """Extract function names from Python code blocks"""
         try:
             tree = ast.parse(code_block)
-            return [node.name for node in ast.walk(tree) if isinstance(node, ast.FunctionDef)]
+            return [node.name for node in ast.walk(tree) if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))]
         except SyntaxError:
             return []
 

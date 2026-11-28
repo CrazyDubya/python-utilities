@@ -95,7 +95,7 @@ class JSONTextProcessor:
         
         # Pattern to match speaker statements
         pattern = re.compile(
-            rf'({re.escape(speaker_name)}:.*?)(?=( [A-Z\s]+:|$))', 
+            rf'({re.escape(speaker_name)}:.*?)(?=(\s[A-Z][A-Z .\'-]*:|\Z))', 
             re.DOTALL
         )
         
